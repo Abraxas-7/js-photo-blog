@@ -18,7 +18,7 @@
 
 /* FONT */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Edu TAS Beginner', sans-serif;
 }
 
 header h1 {
@@ -30,7 +30,7 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90%; /* Se rimpiciolisci la pagina le card non arrivano ai bordi */
+    width: 95%; /* Se rimpiciolisci la pagina le card non arrivano ai bordi */
     max-width: 1200px;
     gap: 25px;
 }
