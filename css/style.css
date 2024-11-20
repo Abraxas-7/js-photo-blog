@@ -1,8 +1,8 @@
 /* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* DEBUG */
@@ -10,114 +10,150 @@
     border: 1px solid red;
 } */
 
-/* SCROLLBAR */
+/* SCROLL */
 ::-webkit-scrollbar {
-    width: 0; /* Rimuove la larghezza della scrollbar */
-    background: transparent; /* Sfondo trasparente */
+  width: 0; /* Rimuove la larghezza della scrollbar */
+  background: transparent; /* Sfondo trasparente */
 } /* Non mi piacciono le scrollbar */
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
 
 /* FONT */
 body {
-    font-family: 'Edu TAS Beginner', sans-serif;
+  font-family: "Edu TAS Beginner", sans-serif;
 }
 
 header h1 {
-    font-size: 3.3rem;
+  font-size: 3.3rem;
 }
 
 /*  UTILITIES */
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 95%; /* Se rimpiciolisci la pagina le card non arrivano ai bordi */
-    max-width: 1200px;
-    gap: 25px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%; /* Se rimpiciolisci la pagina le card non arrivano ai bordi */
+  max-width: 1200px;
+  gap: 25px;
 }
 
-.d-none{
-    display: none;
-}
+.d-none {
+    display: none !important;
+  }
 
 /* HEADER */
 header {
-    background-image: url(../img/wall.png);
-    background-size: cover;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-
+  background-image: url(../img/wall.png);
+  background-size: cover;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* MAIN */
 main {
-    background-image: url(../img/cork.png);
-    background-size: cover;
-    min-height: calc(100vh - 120px);
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-}   
+  background-image: url(../img/cork.png);
+  background-size: cover;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
 
 .card {
-    width: 300px;
-    height: 375px;
-    background-color: white;
-    margin: 20px 0;
-    position: relative;
-    transition: all 0.3s ease-in-out;
+  width: 300px;
+  height: 375px;
+  background-color: white;
+  margin: 20px 0;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
-.card:hover{
-    cursor: pointer;
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.5), 0px 6px 12px rgba(0, 0, 0, 0.5);
-    transform: scale(1.2) rotate(10deg);
-    z-index: 1000;
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.5), 0px 6px 12px rgba(0, 0, 0, 0.5);
+  transform: scale(1.15) rotate(10deg);
+  z-index: 1000;
 }
 
-.card:hover .pin{
-    opacity: 0;
+.card:hover .pin {
+  opacity: 0;
 }
 
-.pin{
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s ease-in-out;
+.pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
 }
 
 .card-image {
-    margin:15PX auto;
-    width: 270px;
-    height: 270px;
+  margin: 15px auto;
+  width: 270px;
+  height: 270px;
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-text {
-    padding: 0 15px;
-    color: #444;
+  padding: 0 15px;
+  color: #444;
 }
 
 .shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
 /* OVERLAY */
-/* #overlay{
-    
-} */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  z-index: 5000;
+}
+
+#overlay img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+#overlay button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+#overlay button:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transform: scale(1.1);
+}
 
 /* MEDIA QUERLY */
 @media (min-width: 425px) {
-    header h1 {
-        font-size: 4.2rem;
-    }
+  header h1 {
+    font-size: 4.2rem;
+  }
 }
