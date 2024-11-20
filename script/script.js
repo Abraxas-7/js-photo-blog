@@ -24,7 +24,7 @@ function generateCards() {
             </div>
   
             <div class="debug card-text">
-              <p>${element.title}</p>
+              <p>${element.title.charAt(0).toUpperCase() + element.title.slice(1)}</p>
             </div>
           </div>
           `;
